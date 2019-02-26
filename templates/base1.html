@@ -33,27 +33,27 @@
 
 <body>
   <!-- Top Bar -->
-  {% include 'partials/_topbar.html' %}
+  {% include 'partials/header.html' %}
   <!-- NavBar -->
   {% include 'partials/_navbar.html' %}
     <!-- Main Content -->
   {% block content %} {% endblock %}
   <!-- Footer -->
-  {% include 'partials/_footer.html' %}
+  {% include 'partials/footer.html' %}
   
 
 <!-- jQuery Library -->
-<script type="text/javascript" src="vendors/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="{% static 'vendors/jquery-3.2.1.min.js' %}"></script>
 <!--materialize js-->
-<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
 <!--prism-->
-<script type="text/javascript" src="vendors/prism/prism.js"></script>
+<script type="text/javascript" src="{% static 'vendors/prism/prism.js' %}"></script>
 <!--scrollbar-->
-<script type="text/javascript" src="vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script type="text/javascript" src="{% static 'vendors/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
 <!--plugins.js - Some Specific JS codes for Plugin Settings-->
-<script type="text/javascript" src="js/plugins.js"></script>
+<script type="text/javascript" src="{% static 'js/plugins.js' %}"></script>
 <!--custom-script.js - Add your own theme custom JS-->
-<script type="text/javascript" src="js/custom-script.js"></script>
+<script type="text/javascript" src="{% static 'js/custom-script.js' %}"></script>
 </body>
 
 </html>
