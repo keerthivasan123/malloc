@@ -27,15 +27,14 @@
     <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
     <link href="{% static 'vendors/prism/prism.css' %}" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="vendors/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet">
-    <link href="vendors/flag-icon/css/flag-icon.min.css" type="text/css" rel="stylesheet">
+    <link href="{% static 'vendors/perfect-scrollbar/perfect-scrollbar.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'vendors/flag-icon/css/flag-icon.min.css' %}" type="text/css" rel="stylesheet">
 </head>
 
 <body>
   <!-- Top Bar -->
   {% include 'partials/header.html' %}
-  <!-- NavBar -->
-  {% include 'partials/_navbar.html' %}
+
     <!-- Main Content -->
   {% block content %} {% endblock %}
   <!-- Footer -->
