@@ -32,11 +32,25 @@
 </head>
 
 <body>
+    <!-- Start Page Loading -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+      </div>
   <!-- Top Bar -->
   {% include 'partials/header.html' %}
+  <div class="main">
+    <div class="wrapper">
+  
+      {% block content %} {% endblock %}
 
-    <!-- Main Content -->
-  {% block content %} {% endblock %}
+      {% include 'partials/rightsidenav.html' %}
+
+    </div>
+  </div>
+    
+
   <!-- Footer -->
   {% include 'partials/footer.html' %}
   

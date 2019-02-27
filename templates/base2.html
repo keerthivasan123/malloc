@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Malloc</title>
+    <link href="{% static 'css//materialize.css' %}" type="text/css" rel="stylesheet">
     <meta name="description" content="Material design landing page template built by TemplateFlip.com"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{% static 'pages/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -15,6 +16,12 @@
             
   </head>
 </head>
+  <!-- Start Page Loading -->
+  <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
 <body id="top">
                 {% block content %} {% endblock %}
                 <script type="text/javascript" src="{% static 'pages/js/jquery-3.2.1.min.js' %}"></script>
