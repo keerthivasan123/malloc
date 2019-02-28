@@ -15,7 +15,7 @@ class startup_Details(models.Model):
     startlogo = models.ImageField(upload_to='photos/%Y/%m/%d/')
 
     def __str__(self):
-        return self.title
+        return self.startupname
 
 class team_member(models.Model):
     startup = models.ForeignKey(startup_Details, on_delete=models.CASCADE)
@@ -27,4 +27,4 @@ class team_member(models.Model):
     gmailid = models.CharField(max_length=264)
 
     def __str__(self):
-        return self.membername, self.gmailid
+        return self.membername
