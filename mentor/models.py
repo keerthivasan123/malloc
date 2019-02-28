@@ -7,7 +7,6 @@ class Mentor(models.Model):
     mentorphoneno = models.IntegerField()
     state = models.CharField(max_length=264)
     city = models.CharField(max_length=264)
-    hours_of_working = models.IntegerField(max_length=10, default="", editable=True)
     mentorspecialisation = models.CharField(max_length=264)
 
 
