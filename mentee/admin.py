@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import startup_Details
-from .models import team_member
+from .models import team_member,project_details
 
 # Register your models here.
 class MenteeAdmin(admin.ModelAdmin):
@@ -17,3 +17,4 @@ class team_member_Admin(admin.ModelAdmin):
   search_fields = ('startupname', 'memberrole')
   list_per_page = 6
 admin.site.register(team_member,team_member_Admin)
+admin.site.register(project_details)
