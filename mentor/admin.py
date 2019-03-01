@@ -1,5 +1,12 @@
 from django.contrib import admin
+
 from .models import Mentor
 
-# Register your models here.
-admin.site.register(Mentor)
+class MentorAdmin(admin.ModelAdmin):
+  list_display = ('mentorname', 'mentorgmailid', 'approved', 'mentorphoneno', 'state', 'mentorspecialisation')
+  list_display_links = ('mentorname',)
+  list_filter = ('mentorname','mentorspecialisation')
+  list_editable = ('approved',)
+  search_fields = ('mentorname', 'mentorgmailid', 'approved', 'mentorphoneno', 'state', 'mentorspecialisation')
+  list_per_page = 6
+admin.site.register(Mentor, MentorAdmin)
