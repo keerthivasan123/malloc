@@ -19,7 +19,7 @@ class startup_Details(models.Model):
 
 class team_member(models.Model):
     startup = models.ForeignKey(startup_Details, on_delete=models.CASCADE)
-    memebername = models.CharField(max_length=264)
+    membername = models.CharField(max_length=264,default='name')
     memberrole = models.CharField(max_length=264)
     memberphoto = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
     descriptionmember = models.TextField(blank=True)

@@ -8,7 +8,8 @@ class Mentor(models.Model):
     state = models.CharField(max_length=264)
     city = models.CharField(max_length=264)
     mentorspecialisation = models.CharField(max_length=264)
+    approved = models.BooleanField(default=False)
 
 
-def __str__(self):
-    return self.mentorname
+    def __str__(self):
+        return self.mentorname
