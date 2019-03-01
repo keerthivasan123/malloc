@@ -28,3 +28,10 @@ class team_member(models.Model):
 
     def __str__(self):
         return self.membername
+
+class project_details(models.Model):
+    project_name = models.CharField(max_length=264)
+    mentor = models.ForeignKey(Mentor, on_delete=models.CASCADE)
+    dev_type = models.CharField(max_length=264)
+    app_type = models.CharField(max_length=264)
+
