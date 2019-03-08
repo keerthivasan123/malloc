@@ -1,0 +1,128 @@
+{% extends 'base4.html' %}
+
+
+
+
+{% block content %}
+      <div class="row">
+        <div class="col l2">
+          <!-- START LEFT SIDEBAR NAV-->
+             {% include 'partials/leftsidenav1.html' %}
+        </div>
+        <div class="col l10">
+                <section id="content" >
+                        <div class="container">
+                          <div class="card-stats">
+                            <div class="row mt-1">
+                              <div class="col s12 m6 l3">
+                                <div class="card gradient-45deg-light-blue-cyan gradient-shadow min-height-100 white-text">
+                                  <div class="padding-4">
+                                    <div class="col s7 m7">
+                                      <i class="material-icons background-round mt-5">card_travel</i>
+                                      <p>Projects</p>
+                                    </div>
+                                    <div class="col s5 m5 right-align">
+                                      <h5 class="mb-0">1</h5>
+                                      <p class="no-margin">New</p>
+                                      <p>Total: 10</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col s12 m6 l3">
+                                <div class="card gradient-45deg-red-pink gradient-shadow min-height-100 white-text">
+                                  <div class="padding-4">
+                                    <div class="col s7 m7">
+                                      <i class="material-icons background-round mt-5">perm_identity</i>
+                                      <p>Mentors</p>
+                                    </div>
+                                    <div class="col s5 m5 right-align">
+                                      <h5 class="mb-0">2</h5>
+                                      <p class="no-margin">New</p>
+                                      <p>Total: 4</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col s12 m6 l3">
+                                <div class="card gradient-45deg-amber-amber gradient-shadow min-height-100 white-text">
+                                  <div class="padding-4">
+                                    <div class="col s7 m7">
+                                      <i class="material-icons background-round mt-5">timeline</i>
+                                      <p>Achivements</p>
+                                    </div>
+                                    <div class="col s5 m5 right-align">
+                                      <h5 class="mb-0">0</h5>
+                                      <p class="no-margin">New</p>
+                                      <p>Totla: 3</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col s12 m6 l3">
+                                <div class="card gradient-45deg-green-teal gradient-shadow min-height-100 white-text">
+                                  <div class="padding-4">
+                                    <div class="col s7 m7">
+                                      <i class="material-icons background-round mt-5">attach_money</i>
+                                      <p>Profit</p>
+                                    </div>
+                                    <div class="col s5 m5 right-align">
+                                      <h5 class="mb-0">$890</h5>
+                                      <p class="no-margin">Today</p>
+                                      <p>Total: $25,0</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                
+                          <div class="divider"></div>
+                          
+                          <div class="divider"></div>
+                          <div id="card-reveal" class="section">
+                            <h4 class="header">Related Mentors</h4>
+                            <div class="row">
+                                {% if mentors %}
+                                  {% for mentor in mentors %}
+                            
+                                    <div class="col s12 m4 l4">
+                                      <div class="card">
+                                        <div class="card-image waves-effect waves-block waves-light">
+                                          <img class="activator" src="{{ mentor.mentorphoto.url }}" style="height:400px;width:500px">
+                                        </div>
+                                        <div class="card-content">
+                                          <span class="card-title activator pink-text text-darken-4 " style="font-weight:bold;">{{ mentor.mentorname }}
+                                              <i class="material-icons right">more_vert</i>
+                                            </span>
+                                            <p>{{mentor.mentorspecialisation}}</p>
+                                        </div>
+                                        <div class="card-reveal">
+                                          <span class="card-title grey-text text-darken-4">Mentor
+                                              <i class="material-icons right">close</i>
+                                              </i>
+                                            </span>
+                                          <p>He is the mentor to help you</p>
+                                        </div>
+                                        <div class="card-action">
+                                            <a class="waves-effect waves-light btn " href="{% url 'rate'%}"><i class="material-icons left">connect</i>Connect</a>
+                                          
+                                        </div>
+                                      </div>
+                                      
+                                    </div>
+                                  {% endfor %}
+                                {% else %}
+                                  <div class="col-md-12">
+                                      <p>No Listings Available</p>
+                                    </div>
+                                {% endif %}
+                 </section>
+
+        </div>
+      </div>
+            
+
+        
+
+{% endblock %}

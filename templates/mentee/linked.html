@@ -1,0 +1,114 @@
+{% extends 'base4.html' %}
+
+{% load static %}
+
+
+{% block content %}
+      <div class="row">
+        <div class="col l2">
+          <!-- START LEFT SIDEBAR NAV-->
+             {% include 'partials/leftsidenav1.html' %}
+        </div>
+        <div class="col l10">
+                <section id="content" >
+                       <div class="row">
+                        <div id="card-widgets">
+                          <div class="row">
+                            <div class="col s12 m4 l7">
+                              <ul id="task-card" class="collection with-header">
+                                <li class="collection-header teal accent-4">
+                                  <h4 class="task-card-title">My Task</h4>
+                                  <p class="task-card-date">Sept 16, 2017</p>
+                                </li>
+                                <li class="collection-item dismissable">
+                                  <input type="checkbox" id="task1" />
+                                  <label for="task1">Create Mobile App UI.
+                                    <a href="#" class="secondary-content">
+                                      <span class="ultra-small">Today</span>
+                                    </a>
+                                  </label>
+                                  <span class="task-cat cyan">Mobile App</span>
+                                </li>
+                                <li class="collection-item dismissable">
+                                  <input type="checkbox" id="task2" />
+                                  <label for="task2">Check the new API standerds.
+                                    <a href="#" class="secondary-content">
+                                      <span class="ultra-small">Monday</span>
+                                    </a>
+                                  </label>
+                                  <span class="task-cat red accent-2">Web API</span>
+                                </li>
+                                <li class="collection-item dismissable">
+                                  <input type="checkbox" id="task3" checked="checked" />
+                                  <label for="task3">Check the new Mockup of ABC.
+                                    <a href="#" class="secondary-content">
+                                      <span class="ultra-small">Wednesday</span>
+                                    </a>
+                                  </label>
+                                  <span class="task-cat teal accent-4">Mockup</span>
+                                </li>
+                                <li class="collection-item dismissable">
+                                  <input type="checkbox" id="task4" checked="checked" disabled="disabled" />
+                                  <label for="task4">I did it !</label>
+                                  <span class="task-cat deep-orange accent-2">Mobile App</span>
+                                </li>
+                              </ul>
+                            </div>
+                            
+                       <div class="row">
+                        <div class="col s12 m4 l5">
+                          <div id="profile-card" class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                              <img class="activator" src="{{mentors.mentorphoto.url}}" alt="user bg">
+                            </div>
+                            <div class="card-content">
+                              
+                              <a class="btn-floating activator btn-move-up waves-effect waves-light red accent-2 z-depth-4 right">
+                                <i class="material-icons">edit</i>
+                              </a>
+                              <span class="card-title activator red-text text-darken-4">{{mentors.mentorname}}</span>
+                              <p class="red-text text-darken-4">
+                                {{mentors.mentorspecilisation}}</p>
+                              <p>
+                                <i class="material-icons">perm_phone_msg</i>{{mentors.mentorphoneno}}</p>
+                              <p>
+                                <i class="material-icons">email</i> {{mentors.mentorgmailid}}</p>
+                                <a class="btn-floating btn-large waves-effect waves-light red"><i class="fas fa-thumbs-up"></i></a>
+                                <p>
+                                  Upvote</p>
+                            </div>
+                            
+                            <div class="card-reveal">
+                              <span class="card-title red-text text-darken-4">{{mentors.mentorname}}
+                                <i class="material-icons right">close</i>
+                              </span>
+                              <p>Here is some more information about this card.</p>
+                              <p>
+                                <i class="material-icons">perm_identity</i> Project Manager</p>
+                              <p>
+                                <i class="material-icons">perm_phone_msg</i> +1 (612) 222 8989</p>
+                              <p>
+                                <i class="material-icons">email</i> yourmail@domain.com</p>
+                              <p>
+                                <i class="material-icons">cake</i> 18th June 1990
+                              </p>
+                              <p>
+                              </p>
+                              <p>
+                                <i class="material-icons">airplanemode_active</i> BAR - AUS
+                              </p>
+                              <p>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                       </div>
+                 </section>
+
+        </div>
+      </div>
+            
+
+{% endblock %}

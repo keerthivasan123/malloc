@@ -7,29 +7,33 @@
             <div class="row">
               <form class="col s12">
                 
-                <script src="email.js"></script>
-                <div class="row">
-                  <div class="input-field col s12">
-                    <i class="material-icons prefix">email</i>
-                    <input id="email3" type="email">
-                    <label for="email">Email</label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col s12">
-                    <i class="material-icons prefix">lock_outline</i>
-                    <input id="password3" type="password">
-                    <label for="password">Password</label>
-                  </div>
-                </div>
                 
-                  <div class="row">
-                    <div class="input-field col s12">
-                      <button class="btn waves-effect waves-light right" type="submit" name="action">Submit
-                        <i class="material-icons right">send</i>
-                      </button>
-                    </div>
-                  </div>
+                  
+                    <div class="row">
+                        <div class="input-field col s12">
+                          <i class="material-icons prefix">email</i>
+                          <input id="email3" type="email">
+                          <label for="websitelink">Email</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <i class="material-icons prefix">lock_outline</i>
+                          <input id="password3" type="password">
+                          <label for="password">Password</label>
+                        </div>
+                      </div>
+                      
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <a class="btn waves-effect waves-light right" href="{% url 'dashboard'%}" >Submit
+                              <i class="material-icons right">send</i>
+                            </a>
+                          </div>
+                        </div>
+
+                
+           
                   <div class="row">
                       <i class="fa fa-google"></i>
                       <i class="fa fa-facebook"></i>
