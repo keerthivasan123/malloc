@@ -13,6 +13,8 @@ class startup_Details(models.Model):
     natureofthecompany = models.CharField(max_length=264)
     UdhyogAadhar = models.IntegerField()
     startlogo = models.ImageField(upload_to='photos/%Y/%m/%d/')
+    password = models.CharField(max_length=78,default='123')
+
 
     def __str__(self):
         return self.startupname
@@ -31,7 +33,11 @@ class team_member(models.Model):
 
 class project_details(models.Model):
     project_name = models.CharField(max_length=264)
-    mentor = models.ForeignKey(Mentor, on_delete=models.CASCADE)
     dev_type = models.CharField(max_length=264)
     app_type = models.CharField(max_length=264)
+    project_des = models.CharField(max_length=600,default='abcd')
+    def __str__(self):
+        return self.project_name
+
+
 
